@@ -30,7 +30,7 @@ sudo apt install mailutils  # Ubuntu/Debian
 
 **Clone this repository:**
 ```bash
-sudo nano /etc/postfix/main.cf
+https://github.com/Prasadrasal2002/menu-based-health-check-system.git
 ```
 ![image](https://github.com/user-attachments/assets/8a998ae8-1b66-42ec-bd4b-55188b98d2fe)
 
@@ -41,7 +41,8 @@ EMAIL="your-email@example.com"
 
 Make the script executable:
 ```bash
-sudo nano /etc/postfix/main.cf
+chmod +x health-check-system.sh
+./health-check-system.sh
 ```
 A menu will appear:
 ![image](https://github.com/user-attachments/assets/6ac0ccb3-b77a-46c0-a3cc-9b1d01a7d154)
