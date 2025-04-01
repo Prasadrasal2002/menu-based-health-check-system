@@ -101,7 +101,7 @@ sudo postmap /etc/postfix/sasl_passwd
 
 ![image](https://github.com/user-attachments/assets/d3a21a45-4297-4bf5-9ad4-49dcad3d4455)
 
-![image](https://github.com/user-attachments/assets/5d68df39-a777-4193-9c98-fb5bbf78db55)
+
 
 
 
