@@ -24,40 +24,52 @@ To install mailx, run:
 ```bash
 sudo apt install mailutils  # Ubuntu/Debian
 ```
+![image](https://github.com/user-attachments/assets/be1db0fc-d991-4cd9-9df1-ad1cb99d76c5)
 
-Ensure you have Postfix and cURL installed:
-```bash
-sudo apt update
-sudo apt install postfix mailutils libsasl2-modules
-```
+
+
 **Clone this repository:**
 ```bash
 sudo nano /etc/postfix/main.cf
 ```
 ![image](https://github.com/user-attachments/assets/8a998ae8-1b66-42ec-bd4b-55188b98d2fe)
 
-Make the script executable:
-```bash
-sudo nano /etc/postfix/main.cf
-```
-
 Set up your email for receiving reports (modify EMAIL in the script):
 ```bash
 EMAIL="your-email@example.com"
 ```
 
+Make the script executable:
+```bash
+sudo nano /etc/postfix/main.cf
+```
+A menu will appear:
+![image](https://github.com/user-attachments/assets/6ac0ccb3-b77a-46c0-a3cc-9b1d01a7d154)
+
+![image](https://github.com/user-attachments/assets/d092e90d-cf24-4887-99b0-6d1169200779)
+
+![image](https://github.com/user-attachments/assets/ed555b0d-a419-4688-b7e5-7618ef6a9324)
+
+![image](https://github.com/user-attachments/assets/b0d8f23e-ddb3-4839-97e7-05d56e6ae3a9)
+
 
 **Configure Postfix for Gmail SMTP Relay:**
+Ensure you have Postfix and cURL installed:
+```bash
+sudo apt update
+sudo apt install postfix mailutils libsasl2-modules
+```
+![image](https://github.com/user-attachments/assets/44726dde-e57c-48dd-b116-3528fd5854c6)
+
 Edit the Postfix configuration file:
 ```bash
 sudo nano /etc/postfix/main.cf
 ```
+![image](https://github.com/user-attachments/assets/7fcb07db-4f4b-42b7-9c50-ee7b824ac1c6)
 
-Add or update these lines:
-sudo nano /etc/postfix/main.cf 
+
+Add or update these lines in (sudo nano /etc/postfix/main.cf):
 ```bash
-sudo nano /etc/postfix/main.cf
-
 relayhost = [smtp.gmail.com]:587
 smtp_sasl_auth_enable = yes
 smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
@@ -65,6 +77,7 @@ smtp_sasl_security_options = noanonymous
 smtp_tls_security_level = encrypt
 smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
 ```
+![image](https://github.com/user-attachments/assets/6911f987-e0f4-49c4-8b4a-cb7949c75dfa)
 
 **Set Up Gmail Authentication:**
 Create the file /etc/postfix/sasl_passwd:
@@ -82,6 +95,13 @@ Add this line in /etc/postfix/sasl_passwd (replace with your Gmail email and App
 sudo chmod 600 /etc/postfix/sasl_passwd
 sudo postmap /etc/postfix/sasl_passwd
 ```
+
+**Email for receiving reports:**
+
+![image](https://github.com/user-attachments/assets/d3a21a45-4297-4bf5-9ad4-49dcad3d4455)
+
+![image](https://github.com/user-attachments/assets/5d68df39-a777-4193-9c98-fb5bbf78db55)
+
 
 
 
