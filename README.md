@@ -59,7 +59,8 @@ Ensure you have Postfix and cURL installed:
 sudo apt update
 sudo apt install postfix mailutils libsasl2-modules
 ```
-![image](https://github.com/user-attachments/assets/6d17dfb6-181c-4b13-b5af-80baec805cd7)
+![image](https://github.com/user-attachments/assets/a2deeb04-4291-43e9-b140-d8bfcc6c55cf)
+
 
 
 Edit the Postfix configuration file:
