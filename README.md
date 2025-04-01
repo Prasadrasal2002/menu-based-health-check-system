@@ -59,13 +59,15 @@ Ensure you have Postfix and cURL installed:
 sudo apt update
 sudo apt install postfix mailutils libsasl2-modules
 ```
-![image](https://github.com/user-attachments/assets/44726dde-e57c-48dd-b116-3528fd5854c6)
+![image](https://github.com/user-attachments/assets/6d17dfb6-181c-4b13-b5af-80baec805cd7)
+
 
 Edit the Postfix configuration file:
 ```bash
 sudo nano /etc/postfix/main.cf
 ```
-![image](https://github.com/user-attachments/assets/7fcb07db-4f4b-42b7-9c50-ee7b824ac1c6)
+![image](https://github.com/user-attachments/assets/cf14addb-75d6-46f8-8ea9-0ba6c12858dd)
+
 
 
 Add or update these lines in (sudo nano /etc/postfix/main.cf):
@@ -77,7 +79,8 @@ smtp_sasl_security_options = noanonymous
 smtp_tls_security_level = encrypt
 smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
 ```
-![image](https://github.com/user-attachments/assets/6911f987-e0f4-49c4-8b4a-cb7949c75dfa)
+![image](https://github.com/user-attachments/assets/e3a28868-a77d-4428-9873-2ccc3f002727)
+
 
 **Set Up Gmail Authentication:**
 Create the file /etc/postfix/sasl_passwd:
