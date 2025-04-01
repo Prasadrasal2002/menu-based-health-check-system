@@ -27,7 +27,6 @@ sudo apt install mailutils  # Ubuntu/Debian
 ![image](https://github.com/user-attachments/assets/be1db0fc-d991-4cd9-9df1-ad1cb99d76c5)
 
 
-
 **Clone this repository:**
 ```bash
 https://github.com/Prasadrasal2002/menu-based-health-check-system.git
