@@ -4,12 +4,12 @@
 This is a menu-based Bash script that performs essential system health checks and sends a comprehensive report via email every four hours. It helps in monitoring disk usage, running services, memory usage, and CPU performance.
 
 **Features:**
-Check Disk Usage: Displays available and used disk space.
-Monitor Running Services: Lists currently active services.
-Assess Memory Usage: Shows memory consumption.
-Evaluate CPU Usage: Monitors CPU performance.
-Send Comprehensive Report via Email: Gathers system data and sends a detailed report.
-Automated Email Report Every Four Hours (via cron).
+**1)** Check Disk Usage: Displays available and used disk space.
+**2)** Monitor Running Services: Lists currently active services.
+**3)** Assess Memory Usage: Shows memory consumption.
+**4)** Evaluate CPU Usage: Monitors CPU performance.
+**5)** Send Comprehensive Report via Email: Gathers system data and sends a detailed report.
+**6)** Automated Email Report Every Four Hours (via cron).
 
 **Prerequisites**
 **Ensure your system meets the following requirements:**
