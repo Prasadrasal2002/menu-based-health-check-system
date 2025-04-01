@@ -4,6 +4,7 @@
 This is a menu-based Bash script that performs essential system health checks and sends a comprehensive report via email every four hours. It helps in monitoring disk usage, running services, memory usage, and CPU performance.
 
 **Features:**
+
 **1)** Check Disk Usage: Displays available and used disk space.
 
 **2)** Monitor Running Services: Lists currently active services.
@@ -17,7 +18,9 @@ This is a menu-based Bash script that performs essential system health checks an
 **6)** Automated Email Report Every Four Hours (via cron).
 
 **Prerequisites**
+
 **Ensure your system meets the following requirements:**
+
 Linux (Ubuntu, CentOS, or any Unix-based system)
 Bash Shell
 mailx (for email functionality)
@@ -33,6 +36,7 @@ sudo apt install mailutils  # Ubuntu/Debian
 
 
 **Clone this repository:**
+
 ```bash
 https://github.com/Prasadrasal2002/menu-based-health-check-system.git
 ```
@@ -61,6 +65,7 @@ A menu will appear:
 
 
 **Configure Postfix for Gmail SMTP Relay:**
+
 Ensure you have Postfix and cURL installed:
 ```bash
 sudo apt update
@@ -89,6 +94,7 @@ smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
 
 
 **Set Up Gmail Authentication:**
+
 Create the file /etc/postfix/sasl_passwd:
 ```bash
 sudo nano /etc/postfix/sasl_passwd
@@ -102,6 +108,7 @@ Add this line in /etc/postfix/sasl_passwd (replace with your Gmail email and App
 
 
 **Secure the Credentials:**
+
 ```bash
 sudo chmod 600 /etc/postfix/sasl_passwd
 sudo postmap /etc/postfix/sasl_passwd
