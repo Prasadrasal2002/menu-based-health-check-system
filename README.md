@@ -43,6 +43,8 @@ Make the script executable:
 chmod +x health-check-system.sh
 ./health-check-system.sh
 ```
+![image](https://github.com/user-attachments/assets/9f37a000-7b36-47b3-8b17-9e616939d877)
+
 A menu will appear:
 ![image](https://github.com/user-attachments/assets/6ac0ccb3-b77a-46c0-a3cc-9b1d01a7d154)
 
@@ -59,16 +61,14 @@ Ensure you have Postfix and cURL installed:
 sudo apt update
 sudo apt install postfix mailutils libsasl2-modules
 ```
-![image](https://github.com/user-attachments/assets/a2deeb04-4291-43e9-b140-d8bfcc6c55cf)
-
+![image](https://github.com/user-attachments/assets/cf86f71a-d153-4dc4-b6ab-095996fb6f81)
 
 
 Edit the Postfix configuration file:
 ```bash
 sudo nano /etc/postfix/main.cf
 ```
-![image](https://github.com/user-attachments/assets/cf14addb-75d6-46f8-8ea9-0ba6c12858dd)
-
+![image](https://github.com/user-attachments/assets/cc11d243-e467-4ad0-9537-b075f67c7465)
 
 
 Add or update these lines in (sudo nano /etc/postfix/main.cf):
@@ -80,7 +80,7 @@ smtp_sasl_security_options = noanonymous
 smtp_tls_security_level = encrypt
 smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
 ```
-![image](https://github.com/user-attachments/assets/e3a28868-a77d-4428-9873-2ccc3f002727)
+![image](https://github.com/user-attachments/assets/2c6c786a-6c26-4b18-bf3f-092b81275068)
 
 
 **Set Up Gmail Authentication:**
@@ -93,21 +93,18 @@ Add this line in /etc/postfix/sasl_passwd (replace with your Gmail email and App
 ```bash
 [smtp.gmail.com]:587 your-email@gmail.com:your-app-password
 ```
+![image](https://github.com/user-attachments/assets/7828ad93-1726-4c8a-921a-ccc1594ed8bb)
+
 
 **Secure the Credentials:**
 ```bash
 sudo chmod 600 /etc/postfix/sasl_passwd
 sudo postmap /etc/postfix/sasl_passwd
 ```
+![image](https://github.com/user-attachments/assets/b6f86143-d5c2-474b-a18f-9094b79f53b3)
+
 
 **Email for receiving reports:**
 
 ![image](https://github.com/user-attachments/assets/d3a21a45-4297-4bf5-9ad4-49dcad3d4455)
-
-
-
-
-
-
-
 
