@@ -30,6 +30,22 @@ Ensure you have Postfix and cURL installed:
 sudo apt update
 sudo apt install postfix mailutils libsasl2-modules
 ```
+**Clone this repository:**
+```bash
+sudo nano /etc/postfix/main.cf
+```
+![image](https://github.com/user-attachments/assets/8a998ae8-1b66-42ec-bd4b-55188b98d2fe)
+
+Make the script executable:
+```bash
+sudo nano /etc/postfix/main.cf
+```
+
+Set up your email for receiving reports (modify EMAIL in the script):
+```bash
+EMAIL="your-email@example.com"
+```
+
 
 **Configure Postfix for Gmail SMTP Relay:**
 Edit the Postfix configuration file:
