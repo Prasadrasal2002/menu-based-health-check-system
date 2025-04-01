@@ -5,10 +5,15 @@ This is a menu-based Bash script that performs essential system health checks an
 
 **Features:**
 **1)** Check Disk Usage: Displays available and used disk space.
+
 **2)** Monitor Running Services: Lists currently active services.
+
 **3)** Assess Memory Usage: Shows memory consumption.
+
 **4)** Evaluate CPU Usage: Monitors CPU performance.
+
 **5)** Send Comprehensive Report via Email: Gathers system data and sends a detailed report.
+
 **6)** Automated Email Report Every Four Hours (via cron).
 
 **Prerequisites**
