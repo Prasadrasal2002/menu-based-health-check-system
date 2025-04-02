@@ -115,6 +115,32 @@ sudo postmap /etc/postfix/sasl_passwd
 ```
 ![image](https://github.com/user-attachments/assets/b6f86143-d5c2-474b-a18f-9094b79f53b3)
 
+**Automating the Report**
+
+To send the system health report every four hours, add a cron job:
+
+```bash
+crontab -e
+```
+![image](https://github.com/user-attachments/assets/faff975f-c308-47a8-90fd-535f6ef13f7f)
+
+
+Add the following line at the end:
+```bash
+0 */4 * * * /path/to/system_health.sh --email
+```
+![image](https://github.com/user-attachments/assets/a5a0d078-a983-40d0-a8c6-1e8e4b7a1a89)
+
+
+**Logging:**
+
+Logs are stored in /var/log/sys_health.log
+
+You can check logs using:
+
+```bash
+tail -f /var/log/sys_health.log
+```
 
 **Email for receiving reports:**
 
